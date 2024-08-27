@@ -8,8 +8,17 @@ import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import Category from "./components/category/Category";
 import Login from "./components/auth/Login";
+import axios from "axios";
+
 
 function App() {
+
+
+
+console.log(process.env.VARIABLE_NAME);
+
+axios.defaults.baseURL = process.env.REACT_API_BASE_URL;
+
   const route = createBrowserRouter([
     {
       path: "/",
